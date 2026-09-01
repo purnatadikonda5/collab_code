@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "@langchain/community": "^1.1.29",
+    "@langchain/core": "^1.2.9",
+    "@langchain/google-genai": "^2.3.0",
+    "@langchain/textsplitters": "^1.0.1",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "hnswlib-node": "^3.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "langchain": "^1.5.10",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-github": "^1.1.0",
+    "socket.io": "^4.8.1",
+    "ws": "^8.21.3",
+    "y-mongodb-provider": "^0.2.1",
+    "y-websocket": "^1.5.0",
+    "yjs": "^13.6.32"
+  }
+}

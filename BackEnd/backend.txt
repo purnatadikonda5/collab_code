@@ -1,0 +1,97 @@
+entry point is the server.js 
+const server=http.createServer(app);
+
+id  = 1 
+✅ Clear Difference Between MongoDB and Mongoose
+🔹 MongoDB
+It is the database itself.
+
+Stores data as JSON-like documents (BSON).
+
+It's a NoSQL database, schema-less by nature.
+
+You interact with it using a query language (similar to JSON).
+
+📌 Think of MongoDB like the warehouse where your data is stored.
+
+🔹 Mongoose
+It is a library for Node.js.
+
+Acts as an ODM (Object Document Mapper) — it helps you write code that talks to MongoDB in an organized way.
+
+It gives you:
+
+Schema definitions
+
+Validation
+
+Query helpers
+
+Middleware (hooks like .pre() or .post())
+
+📌 Think of Mongoose like a helper robot that ensures your data is structured, valid, and easily queried.
+
+⚙️ Roles in Node.js:
+Role	MongoDB	Mongoose (ODM Library)
+What it is	Database engine	Node.js package
+Stores data	Yes (as documents in collections)	No (just helps interact with MongoDB)
+Node use	You need to use a driver (or ODM)	You install via npm i mongoose
+Function	Save, update, query, delete	Add structure, schema, and validation
+
+❓ Will it change for other languages?
+Yes.
+
+Language	MongoDB Library (Driver/ODM)
+Node.js	mongoose or native mongodb driver
+Python	PyMongo (driver), MongoEngine (ODM)
+Java	MongoDB Java Driver, Morphia
+PHP	MongoDB PHP Library
+
+
+
+--------------------------------------------------------------
+id = 2
+URI = Generic term for identifying resources.
+
+Includes URL (web link) and URN (name/ID).
+
+Used in databases, APIs, web links, etc.
+-------------------------------------------------
+id = 3
+📌 Purpose:
+Parses form data sent in application/x-www-form-urlencoded format (default for HTML forms).
+
+It converts the incoming data and attaches it to req.body.
+
+🔧 Middleware Syntax:
+js
+app.use(express.urlencoded({ extended: true }));
+📤 Example Form (Client-Side):
+html
+
+<form method="POST" action="/submit">
+  <input name="user[name]" value="Revanth">
+  <input name="user[age]" value="21">
+  <button type="submit">Send</button>
+</form>
+Sent form data:
+
+
+user[name]=Revanth&user[age]=21
+🔍 Behavior:
+Option	Effect
+extended: false	Uses Node's built-in querystring module (❌ no nested objects).
+Parsed as:
+{ "user[name]": "Revanth", "user[age]": "21" }
+extended: true	Uses qs module (✅ supports nested objects).
+Parsed as:
+{ user: { name: "Revanth", age: "21" } }
+
+✅ Final Summary:
+extended: false → flat object, no nesting.
+
+extended: true → supports deeply nested objects in form data.
+
+Needed when handling POST requests with HTML form data.
+-------------------------------------------------------------------------------------
+id =  4
